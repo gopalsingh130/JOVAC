@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<form onsubmit="return check()">
+
+    Name:
+    <input type="text" id="name">
+    <p id="n" style="color:red"></p>
+
+    Email:
+    <input type="text" id="email">
+    <p id="e" style="color:red"></p>
+
+    Password:
+    <input type="password" id="password">
+    <p id="p" style="color:red"></p>
+
+    <input type="submit" value="Submit">
+
+</form>
+
+<script>
+function check() {
+
+    let valid = true;
+
+    if (document.getElementById("name").value == "") {
+        document.getElementById("n").innerHTML = "Fill this field first";
+        valid = false;
+    } else {
+        document.getElementById("n").innerHTML = "";
+    }
+
+    if (document.getElementById("email").value == "") {
+        document.getElementById("e").innerHTML = "Fill this field first";
+        valid = false;
+    } else {
+        document.getElementById("e").innerHTML = "";
+    }
+
+    if (document.getElementById("password").value == "") {
+        document.getElementById("p").innerHTML = "Fill this field first";
+        valid = false;
+    } else {
+        document.getElementById("p").innerHTML = "";
+    }
+
+    return valid;
+}
+</script>
+
+</body>
+</html>
