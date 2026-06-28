@@ -1,0 +1,140 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#e0f2fe,#f5f3ff);
+    min-height:100vh;
+    padding:30px;
+}
+
+.app-container{
+    max-width:1200px;
+    margin:auto;
+}
+
+h1{
+    text-align:center;
+    color:#0f172a;
+    font-size:3rem;
+    margin-bottom:25px;
+    letter-spacing:1px;
+}
+
+.search-box{
+    display:flex;
+    justify-content:center;
+    gap:12px;
+    margin-bottom:25px;
+}
+
+#searchInput{
+    width:420px;
+    padding:14px 18px;
+    border:2px solid #cbd5e1;
+    border-radius:50px;
+    outline:none;
+    font-size:16px;
+    transition:0.3s;
+}
+
+#searchInput:focus{
+    border-color:#14b8a6;
+    box-shadow:0 0 10px rgba(20,184,166,0.3);
+}
+
+#searchBtn{
+    padding:14px 28px;
+    border:none;
+    border-radius:50px;
+    background:linear-gradient(135deg,#14b8a6,#0ea5e9);
+    color:white;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+#searchBtn:hover{
+    transform:translateY(-2px);
+    box-shadow:0 8px 20px rgba(14,165,233,0.3);
+}
+
+.dashboard{
+    display:grid;
+    grid-template-columns:350px 1fr;
+    gap:25px;
+}
+
+.weather-section{
+    background:linear-gradient(135deg,#0ea5e9,#14b8a6);
+    color:white;
+    border-radius:25px;
+    padding:25px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+
+.news-section{
+    background:white;
+    border-radius:25px;
+    padding:25px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+.news-section h2{
+    color:#0f172a;
+    margin-bottom:20px;
+    border-bottom:3px solid #14b8a6;
+    padding-bottom:10px;
+}
+
+#newsContainer{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(250px,1fr));
+    gap:15px;
+}
+
+.news-card{
+    background:#f8fafc;
+    border-radius:15px;
+    padding:15px;
+    border-left:5px solid #14b8a6;
+    transition:0.3s;
+}
+
+.news-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 8px 15px rgba(0,0,0,0.08);
+}
+
+.news-card h3{
+    color:#1e293b;
+    margin-bottom:8px;
+    font-size:16px;
+}
+
+.news-card p{
+    color:#64748b;
+    font-size:14px;
+}
+
+.hidden{
+    display:none;
+}
+
+.error-text{
+    background:#fee2e2;
+    color:#dc2626;
+    padding:12px;
+    border-radius:10px;
+    margin-bottom:15px;
+}
+
+#loadingIndicator{
+    text-align:center;
+    color:#0ea5e9;
+    font-weight:bold;
+    margin-bottom:15px;
+} 

@@ -1,0 +1,356 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app-container">
+
+        <h1> Wheather App</h1>
+
+        <div class="search-box">
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search city..."
+            >
+            <button id="searchBtn">Search</button>
+        </div>
+
+        <div id="loadingIndicator" class="hidden">
+            Loading...
+        </div>
+
+        <div id="errorMessage" class="hidden error-text"></div>
+
+        <div class="dashboard">
+
+            <div id="weatherCard" class="weather-section">
+
+            </div>
+
+            <div class="news-section">
+
+                <h2>Top Headlines</h2>
+
+                <div id="newsContainer">
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="app.js"></script>
+
+</body>
+</html>  -->
+
+
+
+
+
+
+
+
+<!-- /* *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#e0f2fe,#f5f3ff);
+    min-height:100vh;
+    padding:30px;
+}
+
+.app-container{
+    max-width:1200px;
+    margin:auto;
+}
+
+h1{
+    text-align:center;
+    color:#0f172a;
+    font-size:3rem;
+    margin-bottom:25px;
+    letter-spacing:1px;
+}
+
+.search-box{
+    display:flex;
+    justify-content:center;
+    gap:12px;
+    margin-bottom:25px;
+}
+
+#searchInput{
+    width:420px;
+    padding:14px 18px;
+    border:2px solid #cbd5e1;
+    border-radius:50px;
+    outline:none;
+    font-size:16px;
+    transition:0.3s;
+}
+
+#searchInput:focus{
+    border-color:#14b8a6;
+    box-shadow:0 0 10px rgba(20,184,166,0.3);
+}
+
+#searchBtn{
+    padding:14px 28px;
+    border:none;
+    border-radius:50px;
+    background:linear-gradient(135deg,#14b8a6,#0ea5e9);
+    color:white;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+#searchBtn:hover{
+    transform:translateY(-2px);
+    box-shadow:0 8px 20px rgba(14,165,233,0.3);
+}
+
+.dashboard{
+    display:grid;
+    grid-template-columns:350px 1fr;
+    gap:25px;
+}
+
+.weather-section{
+    background:linear-gradient(135deg,#0ea5e9,#14b8a6);
+    color:white;
+    border-radius:25px;
+    padding:25px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+
+.news-section{
+    background:white;
+    border-radius:25px;
+    padding:25px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+.news-section h2{
+    color:#0f172a;
+    margin-bottom:20px;
+    border-bottom:3px solid #14b8a6;
+    padding-bottom:10px;
+}
+
+#newsContainer{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(250px,1fr));
+    gap:15px;
+}
+
+.news-card{
+    background:#f8fafc;
+    border-radius:15px;
+    padding:15px;
+    border-left:5px solid #14b8a6;
+    transition:0.3s;
+}
+
+.news-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 8px 15px rgba(0,0,0,0.08);
+}
+
+.news-card h3{
+    color:#1e293b;
+    margin-bottom:8px;
+    font-size:16px;
+}
+
+.news-card p{
+    color:#64748b;
+    font-size:14px;
+}
+
+.hidden{
+    display:none;
+}
+
+.error-text{
+    background:#fee2e2;
+    color:#dc2626;
+    padding:12px;
+    border-radius:10px;
+    margin-bottom:15px;
+}
+
+#loadingIndicator{
+    text-align:center;
+    color:#0ea5e9;
+    font-weight:bold;
+    margin-bottom:15px;
+} */ -->
+
+
+
+
+
+
+// const searchInput = document.getElementById("searchInput");
+// const searchBtn = document.getElementById("searchBtn");
+// const weatherCard = document.getElementById("weatherCard");
+// const newsContainer = document.getElementById("newsContainer");
+// const loadingIndicator = document.getElementById("loadingIndicator");
+// const errorMessage = document.getElementById("errorMessage");
+
+// const WEATHER_API_KEY = "7613373bd67d609ab73b97117b6327ff";
+// const NEWS_API_KEY = "25a039dcccd04795aa3c18275ffd6e94";
+
+// function showLoading() {
+//     loadingIndicator.classList.remove("hidden");
+//     errorMessage.classList.add("hidden");
+// }
+
+// function hideLoading() {
+//     loadingIndicator.classList.add("hidden");
+// }
+
+// function showError(message) {
+//     hideLoading();
+//     errorMessage.textContent = message;
+//     errorMessage.classList.remove("hidden");
+// }
+
+// function renderWeather(data) {
+
+//     weatherCard.innerHTML = `
+//         <div class="weather-box">
+
+//             <img
+//                 src="https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png"
+//                 alt="weather"
+//             >
+
+//             <h1>${Math.round(data.main.temp)}°C</h1>
+
+//             <h2>${data.name}, ${data.sys.country}</h2>
+
+//             <p>${data.weather[0].description}</p>
+
+//             <div class="weather-info">
+//                 <div>
+//                     <h3>Humidity</h3>
+//                     <p>${data.main.humidity}%</p>
+//                 </div>
+
+//                 <div>
+//                     <h3>Wind</h3>
+//                     <p>${data.wind.speed} m/s</p>
+//                 </div>
+//             </div>
+
+//         </div>
+//     `;
+// }
+
+// function renderNews(articles) {
+
+//     newsContainer.innerHTML = "";
+
+//     if (articles.length === 0) {
+//         newsContainer.innerHTML = "<p>No news found.</p>";
+//         return;
+//     }
+
+//     articles.slice(0, 6).forEach(article => {
+
+//         const card = document.createElement("div");
+
+//         card.className = "news-card";
+
+//         card.innerHTML = `
+//             <h3>${article.title}</h3>
+//             <p>${article.source.name}</p>
+//         `;
+
+//         newsContainer.appendChild(card);
+//     });
+// }
+
+// async function fetchWeather(city) {
+
+//     const response = await fetch(
+//         `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${WEATHER_API_KEY}&units=metric`
+//     );
+
+//     if (!response.ok) {
+//         throw new Error("City not found");
+//     }
+
+//     const data = await response.json();
+
+//     renderWeather(data);
+// }
+
+// async function fetchNews(city) {
+
+//     const response = await fetch(
+//         `https://newsapi.org/v2/everything?q=${city}&apiKey=${NEWS_API_KEY}`
+//     );
+
+//     const data = await response.json();
+
+//     renderNews(data.articles || []);
+// }
+
+// async function searchCity(city) {
+
+//     showLoading();
+
+//     try {
+
+//         await fetchWeather(city);
+
+//         await fetchNews(city);
+
+//         hideLoading();
+
+//     } catch (error) {
+
+//         console.log(error);
+
+//         showError(error.message);
+//     }
+// }
+
+// searchBtn.addEventListener("click", () => {
+
+//     const city = searchInput.value.trim();
+
+//     if (city) {
+//         searchCity(city);
+//     }
+// });
+
+// searchInput.addEventListener("keyup", (event) => {
+
+//     if (event.key === "Enter") {
+
+//         const city = searchInput.value.trim();
+
+//         if (city) {
+//             searchCity(city);
+//         }
+//     }
+// });
+
+// searchCity("Mathura");

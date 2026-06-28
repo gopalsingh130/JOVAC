@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app-container">
+
+        <h1> Wheather App</h1>
+
+        <div class="search-box">
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search city..."
+            >
+            <button id="searchBtn">Search</button>
+        </div>
+
+        <div id="loadingIndicator" class="hidden">
+            Loading...
+        </div>
+
+        <div id="errorMessage" class="hidden error-text"></div>
+
+        <div class="dashboard">
+
+            <div id="weatherCard" class="weather-section">
+
+            </div>
+
+            <div class="news-section">
+
+                <h2>Top Headlines</h2>
+
+                <div id="newsContainer">
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="app.js"></script>
+
+</body>
+</html> 
